@@ -1,0 +1,88 @@
+.explore-menu {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.explore-menu h1 {
+    color: #f8f4f4;
+    font-weight: 500;
+}
+
+.explore-menu-text {
+    max-width: 70%;
+    color: #989696;
+}
+
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin: 10px 0;
+    overflow-x: scroll;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+.explore-menu-list-item {
+    position: relative; /* For absolute positioning of the overlay */
+    overflow: hidden; /* Hide overflow to maintain the square shape */
+}
+
+.explore-menu-list-item img {
+    width: 250px; /* Increased size for the image */
+    height: 200px; /* Increased size for the image */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for resizing and shadow */
+}
+
+.explore-menu-list-item img:hover {
+    transform: scale(1.15); /* Scale up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover for depth */
+}
+
+.explore-menu-list-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(86, 4, 4, 0.3); /* Transparent red */
+    opacity: 1; /* Fully visible */
+    transition: opacity 0.3s; /* Smooth transition for overlay */
+}
+
+.explore-menu-list-item:hover .overlay {
+    opacity: 0; /* Fade out on hover */
+}
+
+.explore-menu-list-item .active {
+    box-shadow: 0 0 5px rgba(246, 244, 244, 0.5);
+}
+
+.explore-menu-list-item p {
+    margin-top: 10px;
+    color: #faf8f8;
+    font-size: max(1.4vw, 16px);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.explore-menu hr {
+    margin: 10px 0;
+    height: 2px;
+    background-color: #919090;
+    border: none;
+}
+
+@media (max-width: 1050px) {
+    .explore-menu-text {
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,91 @@
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker overlay for elegance */
+    display: grid;
+}
+
+.login-popup-container {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #444; /* Darker text for better contrast */
+    background-color: #ffffff; /* Keeping background white for elegance */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(77, 11, 11); /* Red for title */
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid rgb(77, 11, 11); /* Red border */
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Smooth transition on focus */
+}
+
+.login-popup-inputs input:focus {
+    border-color: rgb(77, 11, 11); /* Highlight on focus */
+}
+
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: rgb(77, 11, 11); /* Elegant red button */
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.login-popup-container button:hover {
+    background-color: rgb(162, 13, 13); /* Darker red on hover */
+}
+
+.loginhere{
+    color:rgb(230, 16, 16); 
+}
+.signinhere{
+    color:rgb(206, 23, 23); 
+}
+.login-popup-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+.login-popup-condition input {
+    margin-top: 5px;
+}
+
+.login-popup p span {
+    color: rgb(77, 11, 11); /* Keeping the red theme */
+    font-weight: 500;
+    cursor: pointer;
+}

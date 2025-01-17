@@ -1,0 +1,110 @@
+/* Header.css */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 0;
+    color: white;
+    text-align: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    opacity: 0.5; /* Adjust opacity for the background */
+}
+
+.header-contents {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    max-width: 1500px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgb(77, 11, 11)); /* Semi-transparent background for readability */
+    border-radius: 10px;
+}
+
+.app-food {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.app-food img {
+    width: 270px; /* Adjust size as needed */
+    height: 500px;
+    margin: 5px 5px 5px 5px;
+    border-radius: 15px;
+    
+}
+.app-food img {
+    transition: opacity 0.3s ease; /* Smooth transition for the opacity */
+
+}
+
+.app-food img:hover {
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 250px; /* Position text above the bottom */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for text */
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.food-item:hover .hover-text {
+    opacity: 1; /* Show text on hover */
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(94, 6, 6);
+    background-color: #f4eded; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5f3b3c; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
