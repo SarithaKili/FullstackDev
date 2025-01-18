@@ -1,35 +1,76 @@
-.add{
+.add {
     width: 70%;
-    margin-left: max(5vw,25px);
+    margin-left: max(5vw, 25px);
     margin-top: 50px;
-    color: #6D6D6D;
+    color: #ffffff; /* Changed text color to white for better contrast */
     font-size: 16px;
 }
-.add form{
-   gap: 20px;
+
+.add form {
+    display: flex; /* Added flex display for better layout */
+    flex-direction: column;
+    gap: 20px;
+    background-color: #222; /* Dark background for form */
+    padding: 20px; /* Padding for inner spacing */
+    border-radius: 8px; /* Rounded corners for form */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
 }
-.add-img-upload img{
+
+.add-img-upload img {
     width: 120px;
+    border-radius: 4px; /* Rounded corners for image */
 }
-.add-product-name, .add-product-description{
-    width: max(40%,280px);
+
+.add-product-name, .add-product-description {
+    width: max(40%, 280px);
 }
-.add-product-name input ,.add-product-description textarea{
-    padding: 10px 10px;
+
+.add-product-name input, .add-product-description textarea {
+    padding: 10px;
+    background-color: #333; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+    border: 1px solid #FF4C24; /* Red border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    transition: border-color 0.3s; /* Smooth transition for focus */
 }
-.add-category-price{
+
+.add-product-name input:focus, .add-product-description textarea:focus {
+    border-color: #FF6F61; /* Lighter red on focus */
+    outline: none; /* Remove default outline */
+}
+
+.add-category-price {
     display: flex;
     gap: 30px;
 }
-.add-category-price select,.add-category-price input{
+
+.add-category-price select, .add-category-price input {
     max-width: 120px;
     padding: 10px;
+    background-color: #333; /* Dark background for select and input */
+    color: #ffffff; /* White text for select and input */
+    border: 1px solid #FF4C24; /* Red border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for focus */
 }
-.add-btn{
+
+.add-category-price select:focus, .add-category-price input:focus {
+    border-color: #FF6F61; /* Lighter red on focus */
+    outline: none; /* Remove default outline */
+}
+
+.add-btn {
     max-width: 120px;
     border: none;
     padding: 10px;
-    background-color: black;
+    background-color: #FF4C24; /* Bright red background for button */
     color: white;
     cursor: pointer;
+    border-radius: 4px; /* Rounded corners for button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.add-btn:hover {
+    background-color: #e03e1b; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
 }

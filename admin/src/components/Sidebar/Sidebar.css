@@ -1,38 +1,39 @@
-.sidebar{
-    width: 18%;
-    min-height: 100vh;
-    border: 1.5px solid #A9A9A9;
-    border-top: 0;
-}
-.sidebar-options{
-    padding-top: 50px;
-    padding-left: 20%;
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #cecccc6c; /* Dark background for the sidebar */
+    color: #090909; /* White text color */
+    height: 100vh; /* Full height for the sidebar */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Padding around the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect on the right */
 }
-.sidebar-option{
+
+.sidebar-options {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #A9A9A9;
-    border-right: 0;
-    padding: 8px 10px;
-    border-radius: 3px 0px 0px 3px; 
-    cursor: pointer;
+    flex-direction: column; /* Stack options vertically */
+    gap: 15px; /* Space between options */
 }
-.sidebar{
-    font-size: max(1vw,10px );
+
+.sidebar-option {
+    display: flex; /* Flex layout for icon and text */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for each option */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background */
+    text-decoration: none; /* Remove underline from links */
+    color: #0f0f0f; /* White text color */
 }
-.sidebar-option img{
-    width: 20px;
+
+.sidebar-option img {
+    width: 24px; /* Fixed size for icons */
+    margin-right: 10px; /* Space between icon and text */
 }
+
+.sidebar-option:hover {
+    background-color: #FF4C24; /* Red background on hover */
+}
+
 .sidebar-option.active {
- background-color: #fff0ed;
- border-color: tomato;
-}
-@media (max-width:900px) {
-    .sidebar-option p{
-       display: none;
-    }
+    background-color: #FF4C24; /* Slightly lighter red for active state */
 }

@@ -1,42 +1,75 @@
-.order-item{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
-    align-items: start;
-    gap: 30px;
-    border: 1px solid tomato;
-    padding: 20px;
-    margin: 30px 0px;
-    font-size: 14px;
-    color: #505050;
+.order {
+    width: 70%;
+    margin: 50px auto; /* Center the order container */
+    color: #280505; /* White text for contrast */
+    background-color: #eeebeb; /* Dark background for the order container */
+    border-radius: 8px; /* Rounded corners for the container */
+    padding: 20px; /* Padding for inner spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
-.order-item-food,.order-item-name{
-    font-weight: 600;
+
+.order h3 {
+    text-align: center; /* Center the header */
+    margin-bottom: 20px; /* Space below the header */
 }
-.order-item-name{
-    margin-top: 30px;
-    margin-bottom: 5px;
+
+.order-list {
+    display: flex;
+    flex-direction: column; /* Stack order items vertically */
+    gap: 15px; /* Space between order items */
 }
-.order-item-address{
-    margin-bottom: 10px;
+
+.order-item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between image and text */
+    background-color: #600707; /* Darker background for each order item */
+    padding: 15px; /* Inner padding for order items */
+    border-radius: 4px; /* Rounded corners for order items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for order items */
 }
-.order-item select{
-    background-color: #ffe8e4;
-    border: 1px solid tomato;
-    width: max(10vw,120px);
-    padding: 10px;
-    outline:none;
+
+.order-item img {
+    width: 50px; /* Set a fixed width for parcel icon */
+    margin-right: 15px; /* Space between image and text */
 }
-@media(max-width:1000px){
-    .order-item{
-        font-size: 12px;
-        grid-template-columns: 0.5fr 2fr 1fr;
-        padding: 15px 8px;
-    }
-    .order-item select{
-        padding: 5px;
-        font-size: 12px;
-    }
-    .order-item img{
-        width: 40px;
-    }
+
+.order-item-food {
+    font-weight: bold; /* Bold text for food items */
+    margin: 0; /* Remove default margin */
+}
+
+.order-item-name {
+    margin: 5px 0; /* Space above and below the name */
+    font-size: 14px; /* Slightly smaller font size */
+}
+
+.order-item-address {
+    font-size: 12px; /* Smaller font size for address */
+    color: #ccc; /* Lighter color for address */
+}
+
+.order-item-phone {
+    margin: 5px 0; /* Space above and below the phone */
+    font-size: 12px; /* Smaller font size */
+    color: #ccc; /* Lighter color for phone */
+}
+
+select {
+    padding: 10px; /* Padding for select dropdown */
+    background-color: #710909; /* Dark background for select */
+    color: #ffffff; /* White text for select */
+    border: 1px solid #FF4C24; /* Red border for select */
+    border-radius: 4px; /* Rounded corners for select */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+select:hover {
+    border-color: #FF6F61; /* Lighter red on hover */
+}
+
+select:focus {
+    outline: none; /* Remove default outline */
+    border-color: #FF6F61; /* Lighter red when focused */
 }
